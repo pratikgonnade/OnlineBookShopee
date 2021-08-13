@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/WelcomeServlet")
 public class Welcomebook extends HttpServlet {
@@ -32,10 +33,14 @@ public class Welcomebook extends HttpServlet {
 			System.out.println("Connection Created ");
 			
 			Statement stm = con.createStatement();
-			
 			ResultSet rs = 	stm.executeQuery("Select * from books");
 			
-			while(rs.next()) {
+			HttpSession session = request.getSession();
+			session.setAttribute("rs", rs);
+			
+			response.sendRedirect("WelcomePage.jsp");
+			
+			/*while(rs.next()) {
 				
 				
 					System.out.print(rs.getString("Books_ID")+" | ");
@@ -44,10 +49,10 @@ public class Welcomebook extends HttpServlet {
 					System.out.print(rs.getInt("Price")+" | ");
 					System.out.println();
 					
-			}
+			}*/
 			
 			
-			con.close();
+			//con.close();
 			
 			
 		} catch (ClassNotFoundException e) {

@@ -7,6 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
- 
+<center>
+
+	<form action="">
+		
+		Customer Name : <input type="text"><br><br>
+		Address : <input type="text"><br><br>
+		Phone No. : <input type="text"><br><br>
+		Order Date : <input type="date"><br><br>
+		
+		<input type="submit" value="Confrim"> <br> <br>
+	</form>
+	
+	<form action="">
+		
+		<input type="submit" value="Cancle">
+		
+	</form>
+ </center>
 </body>
 </html>

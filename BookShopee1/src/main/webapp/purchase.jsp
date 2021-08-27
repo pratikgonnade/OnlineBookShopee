@@ -10,7 +10,7 @@
 </head>
 <body>
 	<center>
-		<h1>Shopping Cart For Book Store</h1>
+		<h1>Shopping Cart For Book Store </h1>
 		<h2>Selected Book Details Are Displayed</h2>
 		<form action="Customer.jsp">
 		

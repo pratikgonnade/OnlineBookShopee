@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome To BookShopee</title>
 </head>
 <body>
 
@@ -25,14 +25,13 @@
 		
 		<%
 		try{
-		
 	    ResultSet rs =(ResultSet) session.getAttribute("rs");
 		while(rs.next()) {
 		%>	
 			
 			<tr>
 				<td><%= rs.getString("Books_ID")%></td>
-				<td><%= rs.getString("Books_name")%></td>
+				<td><a href="Book.jsp?BookID=<%=rs.getString("Books_ID") %>"><%= rs.getString("Books_name")%></a></td>
 				<td><%= rs.getString("Author")%></td>
 				<td><%= rs.getInt("Price")%></td>
 			</tr>

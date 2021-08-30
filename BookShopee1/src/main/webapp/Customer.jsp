@@ -8,7 +8,8 @@
 </head>
 <body>
 <center>
-
+	<h1>Shopping Cart For Book Store</h1>
+	
 	<form action="">
 		
 		Customer Name : <input type="text"><br><br>
@@ -16,10 +17,14 @@
 		Phone No. : <input type="text"><br><br>
 		Order Date : <input type="date"><br><br>
 		
+			<h2>Your Order Details	</h2>
+	
+		
 		<input type="submit" value="Confrim"> <br> <br>
 	</form>
 	
-	<form action="">
+
+	<form action="./WelcomeServlet">
 		
 		<input type="submit" value="Cancle">
 		
